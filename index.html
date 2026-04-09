@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Component -->
+        <header class="header-card">
+            <div class="time-display" id="timeDisplay">10:45:22</div>
+            <div class="date-display" id="dateDisplay">Tuesday, January 27, 2026</div>
+            <div class="greeting" id="greeting">Good Morning</div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="main-content">
+            <!-- Focus Timer Component -->
+            <section class="timer-card">
+                <h2>Focus Timer</h2>
+                <div class="timer-display" id="timerDisplay">25:00</div>
+                <div class="timer-controls">
+                    <button id="startBtn" class="btn btn-primary">Start</button>
+                    <button id="stopBtn" class="btn btn-secondary">Stop</button>
+                    <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                </div>
+            </section>
+
+            <!-- Tasks Component -->
+            <section class="tasks-card">
+                <h2>Tasks</h2>
+                <div class="task-input-container">
+                    <input type="text" id="taskInput" placeholder="Add a new task..." class="task-input">
+                    <button id="addTaskBtn" class="btn btn-primary">Add</button>
+                </div>
+                <div class="task-list" id="taskList">
+                    <!-- Tasks will be dynamically added here -->
+                </div>
+            </section>
+
+            <!-- Quick Links Component -->
+            <section class="links-card">
+                <h2>Quick Links</h2>
+                <div class="link-input-container">
+                    <input type="text" id="linkName" placeholder="Link name" class="link-input">
+                    <input type="url" id="linkUrl" placeholder="URL" class="link-input">
+                    <button id="addLinkBtn" class="btn btn-primary">Add Link</button>
+                </div>
+                <div class="preset-links">
+                    <button class="btn btn-preset" data-url="https://google.com">Google</button>
+                    <button class="btn btn-preset" data-url="https://gmail.com">Gmail</button>
+                    <button class="btn btn-preset" data-url="https://calendar.google.com">Calendar</button>
+                </div>
+                <div class="custom-links" id="customLinks">
+                    <!-- Custom links will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
